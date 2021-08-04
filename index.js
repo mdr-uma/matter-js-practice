@@ -20,3 +20,12 @@ Render.run(render)
 // The Matter.Runner module is an optional utility which provides a game loop, that handles continuously updating a Matter.Engine for you within a browser
 Runner.run(Runner.create(), engine)
 
+// Walls
+const walls = [
+    Bodies.rectangle(400, 0, 800, 40, { isStatic: true }),
+    Bodies.rectangle(400, 600, 800, 40, { isStatic: true }),
+    Bodies.rectangle(0, 300,40, 600, { isStatic: true }),
+    Bodies.rectangle(800, 300, 40, 600, { isStatic: true })
+]
+
+World.add(world, walls)
